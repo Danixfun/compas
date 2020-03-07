@@ -17,8 +17,7 @@ var getJSON = function(url, callback) {
 };
 
 
-function add_student(){
-    var control_number = "14171001"
+function add_student(control_number){
     var student = load_json(control_number)
 }
 
@@ -64,6 +63,7 @@ function add_student_row(student){
 
     compas_row_img.appendChild(student_img);
 
+
     //Student info
     var compas_info_card = document.createElement("div");
     compas_info_card.className = "column compas-info-card"
@@ -83,45 +83,50 @@ function add_student_row(student){
     compas_info_card_wrapper.appendChild(compas_info_card_degree);
     compas_info_card.appendChild(compas_info_card_wrapper);
 
+
+    //Actions
+    var compas_actions = document.createElement("div");
+    compas_actions.className = "column compas-actions"
+
+    var compas_actions_remove = document.createElement("div");
+    compas_actions_remove.className = "compas-actions-remove"
+    var compas_actions_remove_button = document.createElement("button");
+    compas_actions_remove_button.innerHTML="Eliminar";
+    compas_actions_remove.appendChild(compas_actions_remove_button);
+
+    var compas_actions_hide = document.createElement("div");
+    compas_actions_hide.className = "compas-actions-hide"
+    var compas_actions_hide_button = document.createElement("button");
+    compas_actions_hide_button.innerHTML="Ocultar";
+    compas_actions_hide.appendChild(compas_actions_hide_button);
+
+    compas_actions.appendChild(compas_actions_remove);
+    compas_actions.appendChild(compas_actions_hide);
+
+
     //Add to row
     compa_row.appendChild(compas_row_img);
     compa_row.appendChild(compas_info_card);
+    compa_row.appendChild(compas_actions);
+
 
     //Add to container
     compas_container.appendChild(compa_row);
-    
+
 }
 
 
+(function(){
 
-add_student();
+    let control_numbers = ["14171001","14172020"]
+    control_numbers.forEach(element => {
+        add_student(element);
+    });
+
+})();
 
 
-{/* <div class="column compas-info-card">
-                
-    <div class="compas-info-card-wrapper">
 
-        <div class="compas-info-card-name">
-            Daniel Tejeda
-        </div>
 
-        <div class="compas-info-card-degree">
-            Sistemas Computacionales
-        </div>
-
-    </div>
-
-</div>
-
-<div class="column compas-actions">
-
-    <div class="compas-actions-remove">
-        <button>Eliminar</button> 
-    </div>
-
-    <div class="compas-actions-hide">
-        <button>Ocultar</button>
-    </div>
-</div> */}
 
 
