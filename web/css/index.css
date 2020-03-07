@@ -42,14 +42,10 @@ body{
 
 .compas-actions-remove{
     background-color: lightcoral;
-    height: 50%;
-    vertical-align: bottom;
+    height: 100%;
+    vertical-align: middle;
 }
 
-.compas-actions-hide{
-    background-color: lightseagreen;
-    height: 50%;
-}
 
 .column{
     

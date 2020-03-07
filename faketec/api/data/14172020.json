@@ -9,7 +9,8 @@
         "days": "L,M,MM,J,V",
         "starts": "09:00",
         "ends": "10:00",
-        "classroom" : "EB01",
+        "classroom" : "EB03",
+        "code":"4",
         "professor": {
           "name": "Astolfo",
           "control_number": "P001"
@@ -21,6 +22,7 @@
         "starts": "10:00",
         "ends": "11:00",
         "classroom" : "EB02",
+        "code":"2",
         "professor": {
           "name": "Games",
           "control_number": "P002"
@@ -32,6 +34,7 @@
         "starts": "11:00",
         "ends": "12:00",
         "classroom" : "EB01",
+        "code":"3",
         "professor": {
           "name": "Astolfo",
           "control_number": "P003"

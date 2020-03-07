@@ -1,8 +1,8 @@
 {
-    "name": "Daniel",
-    "lastname": "Tejeda Delgado",
+    "name": "Paola",
+    "lastname": "Aguilar Romero",
     "degree": "Sistemas computacionales",
-    "control_number": "14171001",
+    "control_number": "14175050",
     "subjects": [
       {
         "name": "Fundamentos de programación",
@@ -10,7 +10,7 @@
         "starts": "09:00",
         "ends": "10:00",
         "classroom" : "EB03",
-        "code":"1",
+        "code":"7",
         "professor": {
           "name": "Astolfo",
           "control_number": "P001"
@@ -22,7 +22,7 @@
         "starts": "10:00",
         "ends": "11:00",
         "classroom" : "EB02",
-        "code":"2",
+        "code":"8",
         "professor": {
           "name": "Games",
           "control_number": "P002"
