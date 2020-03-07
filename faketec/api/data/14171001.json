@@ -1,0 +1,41 @@
+{
+    "name": "Daniel",
+    "lastname": "Tejeda Delgado",
+    "degree": "Sistemas computacionales",
+    "control_number": "14171001",
+    "subjects": [
+      {
+        "name": "Fundamentos de programación",
+        "days": "L,M,MM,J,V",
+        "starts": "09:00",
+        "ends": "10:00",
+        "classroom" : "EB03",
+        "professor": {
+          "name": "Astolfo",
+          "control_number": "P001"
+        }
+      },
+      {
+        "name": "Prolog",
+        "days": "L,M,MM,J,V",
+        "starts": "10:00",
+        "ends": "11:00",
+        "classroom" : "EB02",
+        "professor": {
+          "name": "Games",
+          "control_number": "P002"
+        }
+      },
+      {
+        "name": "Métodos numéricos",
+        "days": "L,M,MM,J,V",
+        "starts": "11:00",
+        "ends": "12:00",
+        "classroom" : "EB01",
+        "professor": {
+          "name": "Astolfo",
+          "control_number": "P003"
+        }
+      }
+    ]
+  }
