@@ -1,0 +1,76 @@
+body{
+    background-color: white;
+    font-family: calibri;
+}
+
+#compas-container{
+    
+    background-color: rgb(153, 179, 255);
+    border-radius: 10px;
+}
+
+.compas-compa{
+    display: flex; /* equal height of the children */
+}
+
+.compas-img{
+    padding: 8px;
+}
+
+.compas-img img{
+    width: 80px;
+    border-radius: 50%;
+}
+
+
+.compas-info-card{
+}
+
+.compas-info-card-wrapper{
+    height: 100%;
+}
+
+.compas-info-card-name{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.compas-info-card-degree{
+    font-style: italic;
+    height: 50%;
+    color: gray;
+}
+
+.compas-compa:nth-child(odd){
+    background-color: rgb(204, 217, 255);
+}
+
+.compas-compa:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.compas-compa:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.compas-actions-remove{
+    height: 100%;
+    vertical-align: middle;
+}
+
+.compas-actions-remove button{
+    border: none;
+    color: rgb(230, 236, 255);
+    background-color: transparent;
+    padding-right: 10px;
+    padding-top: 100%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.compas-actions-remove .button:hover{
+    color: rgb(0, 12, 51);
+}
+

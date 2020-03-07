@@ -1,0 +1,131 @@
+.main_container{
+	width: 100%;
+	height: 140px;
+}
+
+#text_container{
+	float: left;
+	font-size: 50px;
+	display: block;
+}
+
+#textbox1{
+	float: left;
+	padding-top: 30px;
+	padding-left: 50px;
+	font-weight: bold;
+	font-family: verdana;
+}
+
+#textbox2{
+	font-size: 25px;
+	padding-left: 60px;
+	font-family: tahoma;
+	letter-spacing: 1px;
+}
+
+#image_container{
+	float: right;
+	padding: 10px 50px;
+}
+
+.tablediv th{
+	background: rgb(204, 204, 204);
+}
+
+#topleft_header{
+	border-top-left-radius: 20px;
+}
+
+#topright_header{
+	border-top-right-radius: 20px;
+}
+
+#bottomleft_cell{
+	border-bottom-left-radius: 20px;
+}
+
+#bottomright_cell{
+	border-bottom-right-radius: 20px;
+}
+
+.tablediv{
+	flex-grow: 8;
+}
+
+.tablediv th, td{
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.tablediv table{
+	float: right;
+	width: 100%;
+	margin-right:20px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 20px;
+
+}
+
+.main_table_container{
+	width: 100%;
+	display: flex;
+	margin-top: 20px;
+}
+
+
+tr:nth-child(odd){
+	background-color: rgb(230, 230, 230);
+}
+
+tr:nth-child(even){
+	background-color: rgb(255,255,255);
+}
+
+td:first-child{
+	background-color: rgb(204, 204, 204);
+	width:10%;
+}
+
+.user_box{
+	width: 15%;
+	display: flex;
+	padding-right: 50px;
+	flex-direction: column;
+}
+
+.info_box{
+}
+
+#button_box{
+	float: right;
+}
+
+#button1{
+	background-color: rgb(128, 159, 255);
+	border: none;
+	text-decoration: none;
+	border-radius: 10px;
+	cursor: pointer;
+	color: white;
+	padding: 10px;
+}
+
+#textfield_box{
+	float: left;
+	width: 50%;
+}
+
+#textfield1{
+	border: none;
+	border-radius: 10px;
+	background-color: rgb(204, 217, 255);
+	margin-bottom: 10px;
+	width: 100%;
+	padding: 10px;
+}
+
+
+
+

@@ -1,4 +1,3 @@
-
 var students_list = [];
 var matches = [];
 var on = [];
@@ -24,7 +23,7 @@ function add_student(control_number){
 }
 
 function load_json(control_number){
-    let json_file = getJSON("../faketec/api/data/"+control_number+".json", 
+    let json_file = getJSON("faketec/api/data/"+control_number+".json", 
         function(err, data) {
             if (err !== null) {
                 console.log("Error") 
@@ -87,9 +86,11 @@ function add_student_row(student){
     var compas_actions_remove = document.createElement("div");
     compas_actions_remove.className = "compas-actions-remove"
     var compas_actions_remove_button = document.createElement("button");
-    compas_actions_remove_button.innerHTML="Eliminar";
+    compas_actions_remove_button.innerHTML="<i class='fas fa-trash'></i>";
     compas_actions_remove_button.onclick = (function(){ remove_student(student) });
     compas_actions_remove.appendChild(compas_actions_remove_button);
+
+
 
     compas_actions.appendChild(compas_actions_remove);
 
@@ -179,18 +180,15 @@ function _removeElement(id) {
 }
 
 
-
-(function(){
+window.onload = function(e){ 
+    (function(){
 
     let control_numbers = ["14171001","14172020","14175050"]
     control_numbers.forEach(element => {
         add_student(element);
     });
 
-})();
-
-
-
-
+})(); 
+}
 
 
