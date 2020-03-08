@@ -30,7 +30,7 @@
 }
 
 .tablediv th{
-	background: rgb(204, 204, 204);
+	background: rgb(102, 140, 255);
 }
 
 #topleft_header{
@@ -76,7 +76,7 @@
 
 
 tr:nth-child(odd){
-	background-color: rgb(230, 230, 230);
+	background-color: rgb(204, 217, 255);
 }
 
 tr:nth-child(even){
@@ -84,7 +84,7 @@ tr:nth-child(even){
 }
 
 td:first-child{
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(102, 140, 255);
 	width:10%;
 }
 

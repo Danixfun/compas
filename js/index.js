@@ -197,17 +197,16 @@ function update_matches_ui(){
                             "</div>";
                 myDivWithImgs = document.getElementById(id_builder + "-div");
 
-                myDivWithImgs.innerHTML += "<img id='"+main_student.control_number+"-mexicanada' src='assets/"+main_student.control_number+".jpg'></img>"
-                myDivWithImgs.innerHTML += "<img id='"+matched_student.control_number+"-mexicanada' src='assets/"+matched_student.control_number+".jpg'></img>"
+                myDivWithImgs.innerHTML += "<img id='"+main_student.control_number+"-"+id_builder+"' src='assets/"+main_student.control_number+".jpg'></img>"
+                myDivWithImgs.innerHTML += "<img id='"+matched_student.control_number+"-"+id_builder+"' src='assets/"+matched_student.control_number+".jpg'></img>"
             }
             else{
                 //Ya existe
-
-                let control_number = document.getElementById(matched_student.control_number+"-mexicanada");
+                let control_number = document.getElementById(matched_student.control_number+"-"+id_builder);
 
                 if(!control_number){
                     console.log(control_number); 
-                    myDivWithImgs.innerHTML += "<img id='"+matched_student.control_number+"-mexicanada' src='assets/"+matched_student.control_number+".jpg'></img>"
+                    myDivWithImgs.innerHTML += "<img id='"+matched_student.control_number+"-"+id_builder+"' src='assets/"+matched_student.control_number+".jpg'></img>"
                 }
 
                 
@@ -248,7 +247,7 @@ function remove_student(student){
             let id_builder = hour+":00-"+day;
             let td = document.getElementById(id_builder);
             if(i%2 != 0){
-                td.style.backgroundColor = "rgba(230,230,230,1)";
+                td.style.backgroundColor = "rgba(204,217,255,1)";
                 td.innerHTML = "";
             }
             else{

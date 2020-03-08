@@ -13,6 +13,7 @@ body{
     display: flex; /* equal height of the children */
 }
 
+
 .compas-img{
     padding: 8px;
 }
@@ -48,7 +49,9 @@ body{
 .compas-compa:first-child{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    background-color: rgb(247, 204, 255);
 }
+
 
 .compas-compa:last-child{
     border-bottom-left-radius: 10px;
