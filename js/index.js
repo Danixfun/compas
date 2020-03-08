@@ -23,13 +23,13 @@ function add_student(){
 
     //Check if empty
     if(control_number === ""){
-        alert("Ingresa un número de control")
+        open_modal("Espera","No has ingreso ningún número de control")
         return
     }
 
     //Check if it is a number
     if(isNaN(control_number)){
-        alert("El número de control está conformado por 8 digitos del 0 al 9, verifica el número de control e intenta de nuevo")
+        open_modal("Espera","El número de control está conformado por 8 digitos del 0 al 9, verifica el número de control e intenta de nuevo")
         return
     }
 
@@ -38,7 +38,7 @@ function add_student(){
         let current_student = students_list[i];
         let current_control_number = current_student.control_number;
         if(control_number === current_control_number){
-            alert("Ya has agregado ese número de control")
+            open_modal("Espera","Ya has agregado ese número de control")
             return
         }
     }
@@ -51,7 +51,7 @@ function load_json(control_number){
         function(err, data) {
             if (err !== null) {
                 //Check if it exists
-                alert("El número de control ingresado no existe")
+                open_modal("Espera","El número de control ingresado no existe")
                 return
             } else {
                 load_student_data(data)
@@ -297,9 +297,38 @@ window.onload = function(e){
     }
     });
 
-    
+
 
 })(); 
+}
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+function open_modal(title, description) {
+    var title_modal = document.getElementById("modal_title");
+    var description_modal = document.getElementById("modal_description");
+    title_modal.innerHTML = title;
+    description_modal.innerHTML = description;
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
 }
 
 
