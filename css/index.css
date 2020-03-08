@@ -45,7 +45,7 @@
 	border-bottom-left-radius: 20px;
 }
 
-#bottomright_cell{
+.bottomright_cell{
 	border-bottom-right-radius: 20px;
 }
 
@@ -127,5 +127,14 @@ td:first-child{
 }
 
 
+
+.matched-cell{
+	font-size: 0.7em;
+}
+
+.matched-cell img{
+	width: 25px;
+    border-radius: 50%;
+}
 
 

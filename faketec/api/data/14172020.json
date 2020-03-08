@@ -10,7 +10,7 @@
         "starts": "09:00",
         "ends": "10:00",
         "classroom" : "EB03",
-        "code":"4",
+        "code":"1",
         "professor": {
           "name": "Astolfo",
           "control_number": "P001"

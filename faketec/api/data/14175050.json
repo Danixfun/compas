@@ -10,9 +10,9 @@
         "starts": "09:00",
         "ends": "10:00",
         "classroom" : "EB03",
-        "code":"7",
+        "code":"4",
         "professor": {
-          "name": "Astolfo",
+          "name": "Someone",
           "control_number": "P001"
         }
       },
@@ -22,19 +22,19 @@
         "starts": "10:00",
         "ends": "11:00",
         "classroom" : "EB02",
-        "code":"8",
+        "code":"2",
         "professor": {
           "name": "Games",
           "control_number": "P002"
         }
       },
       {
-        "name": "Métodos numéricos",
-        "days": "L,M,MM,J,V",
-        "starts": "11:00",
-        "ends": "12:00",
+        "name": "Desarrollo sustentable",
+        "days": "L,MM,V",
+        "starts": "14:00",
+        "ends": "15:00",
         "classroom" : "EB01",
-        "code":"3",
+        "code":"5",
         "professor": {
           "name": "Astolfo",
           "control_number": "P003"

@@ -39,6 +39,18 @@
           "name": "Astolfo",
           "control_number": "P003"
         }
+      },
+      {
+        "name": "Desarrollo sustentable",
+        "days": "L,MM,V",
+        "starts": "14:00",
+        "ends": "15:00",
+        "classroom" : "EB01",
+        "code":"5",
+        "professor": {
+          "name": "Astolfo",
+          "control_number": "P003"
+        }
       }
     ]
   }
