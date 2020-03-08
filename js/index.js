@@ -18,18 +18,27 @@ var getJSON = function(url, callback) {
 };
 
 
-function add_student(){
+function add_students(){
+    //14171001,14172020,14175051,16171209
     let control_number = document.getElementById("textfield1").value;
 
     //Check if empty
     if(control_number === ""){
-        open_modal("Espera","No has ingreso ningún número de control")
+        open_modal("Espera","No has ingreso ningún número de control.")
         return
     }
 
+    let array_control_numbers = control_number.split(",");
+    
+    array_control_numbers.forEach(cn => {
+        add_student(cn);
+    });
+}
+
+function add_student(control_number){
     //Check if it is a number
     if(isNaN(control_number)){
-        open_modal("Espera","El número de control está conformado por 8 digitos del 0 al 9, verifica el número de control e intenta de nuevo")
+        open_modal("Espera","El número de control debe está conformado por 8 digitos del 0 al 9, verifica el número de control <b>"+control_number+"</b> e intenta de nuevo.")
         return
     }
 
@@ -38,7 +47,7 @@ function add_student(){
         let current_student = students_list[i];
         let current_control_number = current_student.control_number;
         if(control_number === current_control_number){
-            open_modal("Espera","Ya has agregado ese número de control")
+            open_modal("Espera","Ya has agregado el número de control <b>"+control_number+"</b>.")
             return
         }
     }
@@ -51,7 +60,7 @@ function load_json(control_number){
         function(err, data) {
             if (err !== null) {
                 //Check if it exists
-                open_modal("Espera","El número de control ingresado no existe")
+                open_modal("Espera","El número de control <b>"+control_number+"</b> no existe.")
                 return
             } else {
                 load_student_data(data)
@@ -188,6 +197,7 @@ function update_matches_ui(){
             let id_builder = start_hour+"-"+day;
             let td = document.getElementById(id_builder);
             td.style.backgroundColor = "rgba(255,133,159,1)"; 
+            td.style.cursor = "pointer"; 
 
             var myDivWithImgs = document.getElementById(id_builder + "-div");
             if(!myDivWithImgs){
@@ -201,17 +211,24 @@ function update_matches_ui(){
                 myDivWithImgs.innerHTML += "<img id='"+matched_student.control_number+"-"+id_builder+"' src='assets/"+matched_student.control_number+".jpg'></img>"
             }
             else{
-                //Ya existe
-                let control_number = document.getElementById(matched_student.control_number+"-"+id_builder);
+                //Ya existe el div de imagenes de perfil chicas
 
-                if(!control_number){
-                    console.log(control_number); 
-                    myDivWithImgs.innerHTML += "<img id='"+matched_student.control_number+"-"+id_builder+"' src='assets/"+matched_student.control_number+".jpg'></img>"
+                //Agregar el plus if needed
+                let imagesInside = myDivWithImgs.childElementCount;
+                if (imagesInside > 2){
+                    let plus_sign = document.getElementById("plus.jpg-"+id_builder);
+                    if(!plus_sign){
+                        myDivWithImgs.innerHTML += "<img id='plus.jpg-"+id_builder+"' src='assets/plus.jpg'></img>"
+                    }
                 }
-
-                
+                else{
+                    let control_number = document.getElementById(matched_student.control_number+"-"+id_builder);
+                    if(!control_number){
+                        console.log(control_number); 
+                        myDivWithImgs.innerHTML += "<img id='"+matched_student.control_number+"-"+id_builder+"' src='assets/"+matched_student.control_number+".jpg'></img>"
+                    }
+                }                
             }
-            
 
         });
 
@@ -248,10 +265,12 @@ function remove_student(student){
             let td = document.getElementById(id_builder);
             if(i%2 != 0){
                 td.style.backgroundColor = "rgba(204,217,255,1)";
+                td.style.cursor = "default";
                 td.innerHTML = "";
             }
             else{
                 td.style.backgroundColor = "rgba(255,255,255,1)";
+                td.style.cursor = "default";
                 td.innerHTML = "";
             }
 
