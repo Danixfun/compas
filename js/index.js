@@ -1,6 +1,6 @@
 var students_list = [];
 var matches = [];
-var on = [];
+
 
 var getJSON = function(url, callback) {
     var xhr = new XMLHttpRequest();
@@ -19,7 +19,7 @@ var getJSON = function(url, callback) {
 
 
 function add_students(){
-    //14171001,14172020,14175051,16171209
+    //14171001,14172020,14175051,16171209,13171545,14178812
     let control_number = document.getElementById("textfield1").value;
 
     //Check if empty
@@ -140,7 +140,6 @@ function add_student_row(student){
     //Add to container
     compas_container.appendChild(compa_row);
 
-    on.push(true);
     students_list.push(student);
 
     //Update subject matches among students
@@ -213,8 +212,13 @@ function update_matches_ui(){
             else{
                 //Ya existe el div de imagenes de perfil chicas
 
+                let control_number = document.getElementById(matched_student.control_number+"-"+id_builder);
+                if(!control_number){
+                    myDivWithImgs.innerHTML += "<img id='"+matched_student.control_number+"-"+id_builder+"' src='assets/"+matched_student.control_number+".jpg'></img>"
+                }
+
                 //Agregar el plus if needed
-                let imagesInside = myDivWithImgs.childElementCount;
+                /*let imagesInside = myDivWithImgs.childElementCount;
                 if (imagesInside > 2){
                     let plus_sign = document.getElementById("plus.jpg-"+id_builder);
                     if(!plus_sign){
@@ -222,12 +226,8 @@ function update_matches_ui(){
                     }
                 }
                 else{
-                    let control_number = document.getElementById(matched_student.control_number+"-"+id_builder);
-                    if(!control_number){
-                        console.log(control_number); 
-                        myDivWithImgs.innerHTML += "<img id='"+matched_student.control_number+"-"+id_builder+"' src='assets/"+matched_student.control_number+".jpg'></img>"
-                    }
-                }                
+                    
+                }   */             
             }
 
         });
@@ -236,7 +236,6 @@ function update_matches_ui(){
 }
 
 function remove_student(student){
-    console.log("Borrando...")
     var control_number = student.control_number;
     var foundIndex = -1;
     for (var i=0; i<students_list.length; i++){
@@ -288,7 +287,12 @@ function _removeElement(id) {
 }
 
 
-
+function remove_all_students(){
+    while (students_list.length != 0) {
+        let s = students_list[0];
+        remove_student(s);
+    }
+}
 
 
 

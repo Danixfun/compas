@@ -112,9 +112,19 @@ td:first-child{
 	padding: 10px;
 }
 
+#button2{
+	background-color: rgba(255,133,159,1);
+	border: none;
+	text-decoration: none;
+	border-radius: 10px;
+	cursor: pointer;
+	color: white;
+	padding: 10px;
+}
+
 #textfield_box{
 	float: left;
-	width: 50%;
+	width: 45%;
 }
 
 #textfield1{
@@ -137,4 +147,7 @@ td:first-child{
     border-radius: 50%;
 }
 
+input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
 
