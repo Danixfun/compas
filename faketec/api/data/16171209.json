@@ -1,8 +1,8 @@
 {
-    "name": "Paola",
-    "lastname": "Aguilar Romero",
+    "name": "Alfonso",
+    "lastname": "Reyes Cortés",
     "degree": "Sistemas computacionales",
-    "control_number": "14175050",
+    "control_number": "16171209",
     "subjects": [
       {
         "name": "Fundamentos de programación",
@@ -10,9 +10,9 @@
         "starts": "09:00",
         "ends": "10:00",
         "classroom" : "EB03",
-        "code":"4",
+        "code":"1",
         "professor": {
-          "name": "Someone",
+          "name": "Astolfo",
           "control_number": "P001"
         }
       },
@@ -29,12 +29,24 @@
         }
       },
       {
-        "name": "Desarrollo sustentable",
-        "days": "L,MM,V",
-        "starts": "14:00",
-        "ends": "15:00",
+        "name": "Métodos numéricos",
+        "days": "L,M,MM,J,V",
+        "starts": "11:00",
+        "ends": "12:00",
         "classroom" : "EB01",
-        "code":"5",
+        "code":"9",
+        "professor": {
+          "name": "Astolfo",
+          "control_number": "P003"
+        }
+      },
+      {
+        "name": "Métodos ágiles",
+        "days": "L,MM,V",
+        "starts": "16:00",
+        "ends": "17:00",
+        "classroom" : "EB01",
+        "code":"7",
         "professor": {
           "name": "Astolfo",
           "control_number": "P003"

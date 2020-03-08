@@ -1,0 +1,44 @@
+{
+    "name": "Paola",
+    "lastname": "Aguilar",
+    "degree": "Sistemas computacionales",
+    "control_number": "14175051",
+    "subjects": [
+      {
+        "name": "Fundamentos de programación",
+        "days": "L,M,MM,J,V",
+        "starts": "09:00",
+        "ends": "10:00",
+        "classroom" : "EB03",
+        "code":"4",
+        "professor": {
+          "name": "Someone",
+          "control_number": "P001"
+        }
+      },
+      {
+        "name": "Prolog",
+        "days": "L,M,MM,J,V",
+        "starts": "10:00",
+        "ends": "11:00",
+        "classroom" : "EB02",
+        "code":"2",
+        "professor": {
+          "name": "Games",
+          "control_number": "P002"
+        }
+      },
+      {
+        "name": "Desarrollo sustentable",
+        "days": "L,MM,V",
+        "starts": "14:00",
+        "ends": "15:00",
+        "classroom" : "EB01",
+        "code":"5",
+        "professor": {
+          "name": "Astolfo",
+          "control_number": "P003"
+        }
+      }
+    ]
+  }
